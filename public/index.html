@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="directives/itemDirective/itemDirectiveStyle.css" />
+
+	<title>AngularJsTestApp</title>
+</head>
+
+<body ng-App="app">
+
+	<!--users tree -->
+	<div class="container" ng-controller="treeController as treeCtrl">
+
+		<item class="row" value="treeCtrl.items" length="1" level="0" 
+		fcount="treeCtrl.countChild" count="treeCtrl.countChild(treeCtrl.items)"
+		 fclick="treeCtrl.showModal"></item>
+		
+		 <!--Export button to log json-->
+		<div class="text-center">
+			<a href="#" class="btn btn-default" ng-click="treeCtrl.exportData()">Export to console</a>
+		</div>
+		<!-- modal with edited fields-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="form-group">
+							<label class="lbl-modal" for="editedName">Name</label>
+							<input class="form-control" id="editedName" type="text" 
+							ng-model="treeCtrl.editedItem.name" placeholder="Enter name"></input>
+							<label class="lbl-modal" for="editedName">Title</label>
+							<input class="form-control" id="editedTitle" ng-model="treeCtrl.editedItem.title" 
+							placeholder="Enter title"></input>
+							<label class="lbl-modal" for="editedName">Department</label>
+							<input class="form-control" id="editedDepartment" 
+							ng-model="treeCtrl.editedItem.department" placeholder="Enter department"></input>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" ng-click="treeCtrl.saveChanges()" 
+						data-dismiss="modal">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="settings/app.js"></script>
+	<script type="text/javascript" src="settings/config.js"></script>
+	<script type="text/javascript" src="settings/config.routes.js"></script>
+	<script type="text/javascript" src="controllers/treeController.js"></script>
+	<script type="text/javascript" src="directives/itemDirective/itemDirective.js"></script>
+	<script type="text/javascript"  src="js/jquery.min.js"></script>
+	<script type="text/javascript"  src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

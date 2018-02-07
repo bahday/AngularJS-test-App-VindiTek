@@ -1,0 +1,10 @@
+app
+.config(
+	['$stateProvider','$urlRouterProvider',
+		function($stateProvider,$urlRouterProvider){
+			//%DEFAULT_STATE
+			$stateProvider
+				//%NEW_STATE
+		}
+	]
+)

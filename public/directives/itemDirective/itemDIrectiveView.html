@@ -1,0 +1,23 @@
+<div ng-class="listClass[level]">
+    <div ng-if="value.department&&level==1" class="col-sm-12 centered text-center department" 
+    ng-bind="value.department"></div>
+    <div ng-if="!value.department&&level==1" class="col-sm-12 centered text-center department-hide" ></div>
+    <!--clickable rectangle with info user-->
+    <div ng-class="'item-body-l-'+level" data-toggle="modal" data-target="#myModal" ng-click="fclick(value)">
+        <image ng-if="level<2" src="../img/user-icon.png"></image>
+        <div class="user-info">
+            <label class="oneline" ng-bind="value.name"></label>
+            <br>
+            <span class="oneline" ng-bind="value.title"></span>
+        </div>
+        <div class="user-count">
+        </div>
+        <label class="count-child" ng-bind="count"></label>
+    </div>
+    <!--check childrens at value -->
+    <div ng-if="value.children.length>0">
+        <item ng-if="value.children.length>0&&level<2" ng-repeat="childItem in value.children" 
+            value="childItem" length="value.children.length"
+            level="level+1" fcount="this.fcount" count="fcount(childItem)" fclick="fclick"></item>
+    </div>
+</div>

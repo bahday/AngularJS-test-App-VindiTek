@@ -1,0 +1,74 @@
+{  
+   "structure":{  
+      "id":"user-ron-swanson",
+      "name":"Ron Swanson",
+      "title":"Director",
+      "department":"Parks",
+      "children":[  
+         {  
+            "id":"user-donna-meagle",
+            "name":"Donna Meagle",
+            "title":"Office Manager",
+            "department":"Parks"
+         },
+         {  
+            "id":"user-leslie-knope",
+            "name":"Leslie Knope",
+            "title":"",
+            "department":"",
+            "children":[  
+               {  
+                  "id":"user-april-ludgate",
+                  "name":"April Ludgate",
+                  "title":"Deputy Director of Animal Control",
+                  "department":"Parks",
+                  "children":[  
+                     {  
+                        "id":"user-brett-hull",
+                        "name":"Brett Hull",
+                        "title":"Animal Control",
+                        "department":"Parks"
+                     },
+                     {  
+                        "id":"user-harris-wittells",
+                        "name":"Harris Wittells",
+                        "title":"Animal Control",
+                        "department":"Parks"
+                     },
+                     {  
+                        "id":"user-eugene-dredge",
+                        "name":"Eugene Dredge",
+                        "title":"Animal Control",
+                        "department":"Parks"
+                     }
+                  ]
+               },
+               {  
+                  "id":"user-andy-dwyer",
+                  "name":"Andy Dwyer",
+                  "title":"Pawnee Shoe Shiner",
+                  "department":"Parks"
+               }
+            ]
+         },
+         {  
+            "id":"user-carl-lorthner",
+            "name":"Carl Lorthner",
+            "title":"Security Officer",
+            "department":"Parks"
+         },
+         {  
+            "id":"user-tom-haverford",
+            "name":"Tom Haverford",
+            "title":"Administrator",
+            "department":"Parks"
+         },
+         {  
+            "id":"user-ann-perkins",
+            "name":"Ann Perkins",
+            "title":"PR Director",
+            "department":"Health"
+         }
+      ]
+   }
+}
