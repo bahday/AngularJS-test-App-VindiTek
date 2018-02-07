@@ -47,11 +47,9 @@ angular.module('app', [])
                 })
                 .then(function (response) {
                     vm.items = response;
-
                 });
-
         }
-
+        
         vm.getData = function () {
             return fetch('structure')
                 .then(
